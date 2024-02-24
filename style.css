@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    background: url('https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+h1{
+    margin: 10px;
+    color: antiquewhite;
+}
+
+.box{
+    color: #fff;
+    backdrop-filter: blur(30px);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    box-shadow: 2px 4px 20px rgba(0,0,0,0.4);
+    transform: translateX(200%);
+    transition: transform 0.4s ease;
+}
+
+/* This to make even sections scroll from left to right not all the boxes from right to left */
+.box:nth-of-type(even){
+    transform: translateX(-400%);
+}
+
+.box.show{
+    transform: translateX(0);
+}
+
+
+.box h2{
+    font-size: 30px;
+}
